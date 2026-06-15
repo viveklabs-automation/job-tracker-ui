@@ -35,6 +35,14 @@
     "vite": "^5.3.1"
   },
   "overrides": {
-    "eslint": "$eslint"
+    "eslint-plugin-react-hooks": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-react-refresh": {
+      "eslint": "$eslint"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
