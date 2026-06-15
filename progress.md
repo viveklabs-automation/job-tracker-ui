@@ -1,0 +1,32 @@
+# Progress Log — Local-First Job Tracker
+
+## 2026-06-15
+- **Milestone**: Project Initialization & Memory Setup.
+  - Created `LLM.md` (Constitution).
+  - Created `task_plan.md` (Phases & Checklist).
+  - Created `findings.md` (Constraints & Decisions).
+  - Created `progress.md` (Progress Log).
+  - Created initial `implementation_plan.md` artifact with Discovery Questions.
+- **Milestone**: Project Scaffolding.
+  - Successfully scaffolded Vite + React + TS project inside the root workspace using temporary subfolders to avoid overwriting repository constitutional files.
+  - Modified dependencies to downgrade to React 18, and added `idb`, `@dnd-kit/core`, `@dnd-kit/sortable`, `recharts`, `uuid`, and `lucide-react`.
+  - Installed dependencies via `npm install --legacy-peer-deps`.
+- **Milestone**: Database & Types Implementation.
+  - Created `src/types/index.ts` declaring types.
+  - Created database index (`src/db/index.ts`) seeding default tracker statuses.
+  - Created separate CRUD modules for `jobs.ts`, `statuses.ts`, `contacts.ts`, `tasks.ts`, and `reminders.ts`.
+- **Milestone**: UI Shell & Layouts.
+  - Added Design System variables (`src/styles/tokens.css`) and global styling (`src/styles/global.css`) supporting Dark and Light theme triggers.
+  - Implemented `Sidebar.tsx` navigation panel, `InsightsPanel.tsx` widget panel, and `MainWorkspace.tsx` active page switcher.
+- **Milestone**: Shared Components & Main Screens.
+  - Built `SearchBar.tsx`, `FilterBar.tsx`, `QuickAddFAB.tsx`, `QuickAddModal.tsx` supporting async duplicate checking and recruiter assignments.
+  - Built Dashboard View (`DashboardView.tsx`, `StatCards.tsx`, `TodayTasks.tsx`, `RecentActivity.tsx`).
+  - Built Kanban Board View (`Board.tsx`, `Column.tsx`, `JobCard.tsx`) with `@dnd-kit/core` drag operations.
+  - Built Job Detail Drawer (`Drawer.tsx`, `Timeline.tsx`) with status note updates.
+  - Built Month Calendar Grid (`CalendarView.tsx`).
+  - Built Analytics Dashboard (`Charts.tsx`) utilizing Recharts charts.
+  - Built Contacts Directory (`ContactsView.tsx`).
+- **Milestone**: Types Debug & Successful Compilation.
+  - Debugged and resolved verbatim type modules compilation errors and unused variable warnings.
+  - Bypassed Recharts TS type declarations incompatibilities in React 18 using safe type casting.
+  - Successful bundle build with `npm run build` outputting distribution artifacts under `dist/`.
